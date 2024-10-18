@@ -68,7 +68,6 @@ h3 {
   width: 480px;
   background-color: aliceblue;
   display: flex;
-
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
@@ -78,7 +77,6 @@ h3 {
   padding-left: 22px;
   padding-right: 22px;
   margin-bottom: 10px;
-
   border-radius: 5px;
   width: 440px;
   border: 2px solid;
@@ -116,7 +114,6 @@ h3 {
   flex-direction: column;
   background-color: white;
   gap: 10px;
-  /* border: 1px solid black; */
 }
 
 .closeIcon {
@@ -170,7 +167,6 @@ h3 {
 .deleteBtns {
   display: flex;
   justify-content: space-around;
-  /* background-color: black; */
   width: 400px;
   padding: 10px;
   margin-bottom: 20px;
@@ -184,4 +180,57 @@ h3 {
 
 .deleteBtns button:hover {
   cursor: "pointer";
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container,
+  .tasks,
+  .filterbox,
+  .deleteBtns {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .tasks li {
+    width: 100%;
+  }
+
+  .PopUp {
+    width: 90%;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  #root {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .container,
+  .tasks {
+    width: 95%;
+  }
+
+  .tasks li {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .filterbox,
+  .deleteBtns {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .PopUp {
+    width: 95%;
+    padding: 10px;
+  }
 }
